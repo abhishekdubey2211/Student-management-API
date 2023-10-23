@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "25bf1244-870f-4a58-a535-04e73de0d453",
+		"name": "StudentManagement",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28031818",
+		"_collection_link": "https://gold-astronaut-706993.postman.co/workspace/My-Workspace~6d25a4b9-1438-450b-811b-58f1a81711fd/collection/28031818-25bf1244-870f-4a58-a535-04e73de0d453?action=share&source=collection_link&creator=28031818"
+	},
+	"item": [
+		{
+			"name": "AddStudentInformation",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"rollno\":2,\r\n    \"firstname\":\"Abhishek\",\r\n    \"lastname\":\"Dubey\",\r\n    \"gender\":\"MALE\",\r\n    \"contactno\":\"8850801468;9820744591\",\r\n    \"emailid\":\"abdubey@gmail.com;abhi123@hmail.com\",\r\n    \"dob\":\"2002-11-22\",\r\n    \"active\":1,\r\n    \"ressidentialAddress\":[\r\n        {\r\n            \"address1\":\"Pushpanjali CHS Mahada Colony Vashinaka Chembur \",\r\n            \"city\":\"Mumbai\",\r\n            \"pincode\":\"400074\",\r\n            \"country\":\"INDIA\",\r\n            \"state\":\"Maharastra\"\r\n        }\r\n    ],\r\n    \"qualificationDetails\":[\r\n        {\r\n            \"institutionname\":\"Anudip Foundation\",\r\n            \"course\":\"Java FullStack Development using Angular  \",\r\n            \"duration\":6,\r\n            \"fromdate\":\"2023-2-11\",\r\n            \"todate\":\"2023-7-23\",\r\n            \"percentage\":98\r\n        },{\r\n            \"institutionname\":\"Anudip Foundation\",\r\n            \"course\":\"Python FullStack Development using Angular  \",\r\n            \"duration\":6,\r\n            \"fromdate\":\"2023-2-11\",\r\n            \"todate\":\"2023-7-23\",\r\n            \"percentage\":100\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/studentinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editStudentInformation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentid\":1,\r\n    \"rollno\":3,\r\n    \"firstname\":\"Abhishek\",\r\n    \"lastname\":\"Dubey\",\r\n    \"gender\":\"MALE\",\r\n    \"contactno\":\"8850801468;9820744591\",\r\n    \"emailid\":\"abdubey@gmail.com;abhi123@hmail.com\",\r\n    \"dob\":\"2002-11-22\",\r\n    \"active\":1,\r\n    \"ressidentialAddress\":[\r\n        {\r\n            \"address1\":\"Pushpanjali CHS Mahada Colony Vashinaka Chembur \",\r\n            \"city\":\"Mumbai\",\r\n            \"pincode\":\"400074\",\r\n            \"country\":\"INDIA\",\r\n            \"state\":\"Maharastra\"\r\n        }\r\n    ],\r\n    \"qualificationDetails\":[\r\n        {\r\n            \"institutionname\":\"Anudip Foundation\",\r\n            \"course\":\"Java FullStack Development using Angular  \",\r\n            \"duration\":6,\r\n            \"fromdate\":\"2023-2-11\",\r\n            \"todate\":\"2023-7-23\",\r\n            \"percentage\":98\r\n        },{\r\n            \"institutionname\":\"Anudip Foundation\",\r\n            \"course\":\"Python FullStack Development using Angular  \",\r\n            \"duration\":6,\r\n            \"fromdate\":\"2023-2-11\",\r\n            \"todate\":\"2023-7-23\",\r\n            \"percentage\":100\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/studentinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllStudentInformation",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/studentinfo/get_allstudents",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo",
+						"get_allstudents"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteStudentInformation",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentid\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/studentinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getStudentInformationById",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentid\":1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/studentinfo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "StudentInformationRollBack",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"studentid\": 1\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8086/studentinfo/rollback",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo",
+						"rollback"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "version",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8086/studentinfo/version",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8086",
+					"path": [
+						"studentinfo",
+						"version"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,9 @@
+com\management\Actions\StudentinformationAction.class
+com\management\model\StudentInformationApiResponse.class
+com\management\controller\StudentinformationController.class
+com\management\model\StudentInformation.class
+com\management\constants\MessageConstants.class
+com\management\model\QualificationDetails.class
+com\management\model\RessidentialAddress.class
+com\management\StudentManagementApplication.class
+com\management\ToCreateTable.class
